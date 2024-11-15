@@ -83,5 +83,15 @@
         </div>
     </footer>
     <script src="js/script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+
+            menuToggle.addEventListener('click', function () {
+                navLinks.classList.toggle('show');
+            });
+        });
+    </script>
 </body>
 </html>
