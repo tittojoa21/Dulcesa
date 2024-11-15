@@ -1,0 +1,328 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fef8fb;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 10px;
+    scroll-behavior: smooth;
+}
+
+/* Animaciones clave */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Header Styles */
+header {
+    background-color: #ff69b4;
+    color: #fef8fb;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+header h1 {
+    font-weight: 600;
+    font-size: 2em;
+    letter-spacing: 1.5px;
+    color: #fef8fb;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fef8fb;
+    font-weight: 400;
+    font-size: 1.1em;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ffb3c1;
+}
+
+/* Canasta Icono */
+#canasta-icono {
+    position: relative;
+    cursor: pointer;
+    color: #fef8fb;
+    transition: transform 0.3s;
+}
+
+#canasta-icono i {
+    font-size: 1.8em;
+}
+
+#canasta-contador {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff69b4;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 0.8em;
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+#canasta-icono:hover {
+    transform: scale(1.1);
+}
+
+/* Productos Section */
+#productos {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#productos h2 {
+    font-size: 2em;
+    color: #ff69b4;
+    margin-bottom: 30px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.productos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.producto {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s, box-shadow 0.4s;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.producto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    animation: zoomIn 1s ease-in-out;
+}
+
+.producto h3 {
+    margin-top: 15px;
+    color: #ff69b4;
+    font-size: 1.5em;
+}
+
+.producto p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #777;
+}
+
+button.agregar-canasta {
+    background-color: #ff69b4;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease-in-out, transform 0.3s;
+    animation: fadeIn 1.8s ease-in-out;
+}
+
+button.agregar-canasta:hover {
+    background-color: #ff85b3;
+    transform: translateY(-3px);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: zoomIn 0.6s ease-in-out;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #ffb3c1;
+    font-size: 1.8em;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #ff4c4c;
+}
+
+/* Canasta Items */
+.canasta-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    background-color: #fefefe;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.canasta-item-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.canasta-item-content {
+    flex: 1;
+    text-align: left;
+    font-size: 1em;
+    color: #333;
+}
+
+.eliminar-item {
+    background-color: #ffb3c1;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.eliminar-item:hover {
+    background-color: #ff4c4c;
+}
+
+/* Total Amount and Comprar Button */
+.total-amount {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #ff69b4;
+    margin-top: 20px;
+}
+
+.btn-comprar {
+    background-color: #ff69b4;
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out, transform 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #ff85b3;
+    transform: translateY(-3px);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #ff69b4;
+    color: #fef8fb;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+footer a {
+    color: #fef8fb;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #ffb3c1;
+}

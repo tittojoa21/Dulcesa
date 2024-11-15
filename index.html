@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Postres - Dulcesa</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">Dulcesa</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a id="contacto-link" href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <div id="canasta-icono" class="canasta-icon">
+                <i class="fas fa-shopping-basket"></i>
+                <span id="canasta-contador">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="productos">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <div class="productos-container">
+                <div class="producto" data-nombre="Bombones de Quaker" data-precio="6" data-imagen="images/bombones.webp">
+                    <img src="images/bombones.webp" alt="Bombones de Quaker" class="product-img">
+                    <h3>Bombones de Quaker</h3>
+                    <p>Precio: $6</p>
+                    <button class="agregar-canasta btn-hover">Agregar a la Canasta</button>
+                </div>
+                <div class="producto" data-nombre="Chocotorta" data-precio="8" data-imagen="images/chocotorta.png">
+                    <img src="images/chocotorta.png" alt="Chocotorta" class="product-img">
+                    <h3>Chocotorta</h3>
+                    <p>Precio: $8</p>
+                    <button class="agregar-canasta btn-hover">Agregar a la Canasta</button>
+                </div>
+                <div class="producto" data-nombre="Frutillas con Crema" data-precio="5" data-imagen="images/frutillas.jpg">
+                    <img src="images/frutillas.jpg" alt="Frutillas con Crema" class="product-img">
+                    <h3>Frutillas con Crema</h3>
+                    <p>Precio: $5</p>
+                    <button class="agregar-canasta btn-hover">Agregar a la Canasta</button>
+                </div>
+                <div class="producto" data-nombre="Postre Oreo" data-precio="7" data-imagen="images/oreo.webp">
+                    <img src="images/oreo.webp" alt="Postre Oreo" class="product-img">
+                    <h3>Postre Oreo</h3>
+                    <p>Precio: $7</p>
+                    <button class="agregar-canasta btn-hover">Agregar a la Canasta</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Canasta -->
+    <div id="canasta-modal" class="modal hidden">
+        <div class="modal-content slide-up">
+            <span id="close-modal" class="close">&times;</span>
+            <h2>Mi Canasta</h2>
+            <div id="canasta-items"></div>
+            <p class="total-amount">Total: $<span id="total">0</span></p>
+            <button id="comprar" class="btn-comprar btn-hover">Comprar</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>Contacto: <a id="contacto-footer-link" href="#">contacto@dulcesa.com</a></p>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2024 Dulcesa. Todos los derechos reservados.</p>
+            <p class="diseno-discreto">Diseñado por <span>titojoa</span></p>
+        </div>
+    </footer>
+</body>
+</html>
+    
