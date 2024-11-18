@@ -99,20 +99,20 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         mensaje += `Total: $${totalElement.textContent}`;
-        const url = `https://wa.me/5491234567890?text=${encodeURIComponent(mensaje)}`;
+        const url = `https://wa.me/5493472611258?text=${encodeURIComponent(mensaje)}`;
         window.open(url, '_blank');
 
         modal.classList.remove('show'); // Cerrar la ventana modal al hacer la compra
     });
 
     contactoLink.addEventListener('click', function () {
-        const whatsappURL = "https://wa.me/5491234567890";
+        const whatsappURL = "https://wa.me/5493472611258";
         window.open(whatsappURL, '_blank');
     });
 
     contactoFooterLink.addEventListener('click', function (event) {
         event.preventDefault(); // Prevent default link behavior
-        const whatsappURL = "https://wa.me/5491234567890";
+        const whatsappURL = "https://wa.me/5493472611258";
         window.open(whatsappURL, '_blank');
     });
 });
