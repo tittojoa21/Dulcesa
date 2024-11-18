@@ -31,27 +31,27 @@
         <section id="productos">
             <h2 class="section-title">Nuestros Productos</h2>
             <div class="productos-container">
-                <div class="producto" data-nombre="Bombones de Quaker" data-precio="6" data-imagen="images/20241117_145559_608.jpg">
+                <div class="producto" data-nombre="Postre Oreo" data-precio="4000" data-imagen="images/20241117_145559_608.jpg">
                     <img src="images/20241117_145559_608.jpg" alt="Postre Oreo" class="product-img">
                     <h3>Postre Oreo</h3>
                     <p>Precio: $4000</p>
                     <button class="agregar-canasta btn-hover">Agregar a la Canasta</button>
                 </div>
-                <div class="producto" data-nombre="Chocotorta" data-precio="8" data-imagen="images/IMG-20241116-WA0018.jpg">
+                <div class="producto" data-nombre="Chocotorta" data-precio="4000" data-imagen="images/IMG-20241116-WA0018.jpg">
                     <img src="images/IMG-20241116-WA0018.jpg" alt="Chocotorta" class="product-img">
                     <h3>Chocotorta</h3>
                     <p>Precio: $4000</p>
                     <button class="agregar-canasta btn-hover">Agregar a la Canasta</button>
                 </div>
-                <div class="producto" data-nombre="Frutillas con Crema" data-precio="5" data-imagen="images/frutillas.jpg">
+                <div class="producto" data-nombre="Postre Oreo Sin TACC" data-precio="4000" data-imagen="images/20241117_145559_608.jpg">
                     <img src="images/20241117_145559_608.jpg" alt="Postre Oreo Sin TACC" class="product-img">
                     <h3>Postre Oreo (Sin TACC)</h3>
                     <p>Precio: $4000</p>
                     <button class="agregar-canasta btn-hover">Agregar a la Canasta</button>
                 </div>
-                <div class="producto" data-nombre="Postre Oreo" data-precio="7" data-imagen="images/IMG-20241117-WA0021.jpg">
+                <div class="producto" data-nombre="Choco Oreo" data-precio="4000" data-imagen="images/IMG-20241117-WA0021.jpg">
                     <img src="images/IMG-20241117-WA0021.jpg" alt="Choco Oreo" class="product-img">
-                    <h3><Canvas>Choco</Canvas> Oreo</h3>
+                    <h3>Choco Oreo</h3>
                     <p>Precio: $4000</p>
                     <button class="agregar-canasta btn-hover">Agregar a la Canasta</button>
                 </div>
@@ -72,14 +72,7 @@
 
     <footer>
         <div class="footer-container">
-            <p>Contacto: <a id="contacto-footer-link" href="#">contacto@dulcesa.com</a></p>
-            <div class="social-media">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
             <p>&copy; 2024 Dulcesa. Todos los derechos reservados.</p>
-            <p class="diseno-discreto">Diseñado por <span>titojoa</span></p>
         </div>
     </footer>
     <script src="js/script.js" defer></script>
@@ -90,6 +83,13 @@
 
             menuToggle.addEventListener('click', function () {
                 navLinks.classList.toggle('show');
+            });
+
+            // Ajuste para el cierre del menú en móvil cuando se selecciona una opción
+            navLinks.addEventListener('click', function (event) {
+                if (event.target.tagName === 'A') {
+                    navLinks.classList.remove('show');
+                }
             });
         });
     </script>
