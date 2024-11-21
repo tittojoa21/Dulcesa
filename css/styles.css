@@ -166,7 +166,7 @@ header h1 {
 
 .productos-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 
@@ -187,15 +187,15 @@ header h1 {
 .producto img {
     width: 100%;
     height: auto;
-    max-height: 350px;
-    object-fit: cover;
+    max-height: 350px; /* Ajuste del tamaño máximo para ver mejor el contenido */
+    object-fit: contain; /* Contain para ver la imagen completa */
     border-radius: 15px;
     animation: zoomIn 1s ease-in-out;
 }
 
 @media (max-width: 768px) {
     .producto img {
-        max-height: 250px;
+        max-height: 250px; /* Reducir el tamaño para móviles */
     }
 }
 
