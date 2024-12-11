@@ -106,13 +106,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     contactoLink.addEventListener('click', function () {
-        const whatsappURL = "https://wa.me/5493472611258";
+        const whatsappURL = "https://wa.me/xxxxxxxxx";
         window.open(whatsappURL, '_blank');
     });
 
     contactoFooterLink.addEventListener('click', function (event) {
         event.preventDefault(); // Prevent default link behavior
-        const whatsappURL = "https://wa.me/5493472611258";
+        const whatsappURL = "https://wa.me/xxxxxxxxx";
         window.open(whatsappURL, '_blank');
     });
 });
